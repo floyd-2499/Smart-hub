@@ -1,0 +1,60 @@
+@import "./variables";
+
+.header {
+  width: 90%;
+  margin: auto;
+  padding: 20px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    width: 25%;
+    margin: 0;
+    cursor: pointer;
+
+    a {
+      text-decoration: none;
+      color: $dark-text;
+      font-size: 44px;
+      font-weight: 600;
+      &:hover {
+        color: $light-text;
+      }
+    }
+  }
+  .links {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+    z-index: 2;
+    margin: 0;
+
+    a {
+      text-decoration: none;
+      margin: 0;
+      padding: 0px 25px;
+      font-size: 28px;
+      color: $dark-text;
+      font-weight: 500;
+      cursor: pointer;
+
+      &:hover {
+        color: $light-text;
+      }
+    }
+    i {
+      margin: 0%;
+      margin-left: 40px;
+      font-size: 28px;
+      color: $dark-text;
+      cursor: pointer;
+
+      &:hover {
+        color: $light-text;
+      }
+    }
+  }
+}

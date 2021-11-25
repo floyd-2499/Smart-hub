@@ -1,0 +1,15 @@
+@import "./variables";
+@import "./homeStyle";
+@import "./header";
+
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Mada', sans-serif;
+  max-width: 1560px;
+  margin: auto;
+
+  &::-webkit-scrollbar {  
+    display: none;
+  }
+} 
