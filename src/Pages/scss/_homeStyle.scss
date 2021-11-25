@@ -139,7 +139,17 @@
 .home2 {
   width: 90%;
   margin: auto;
-  height: 100vh;
+  height: auto;
+  margin-top: 40px;
+  .slider {
+    width: 100%;
+    min-height: 52vh;
+    height: fit-content;
+    margin-bottom: 100px;
+  }
+  .carousel-indicators {
+    display: none;
+  }
 
   img {
     width: 100%;
@@ -148,7 +158,7 @@
 }
 
 .collections {
-  height: 100vh;
+  height: 97vh;
   width: 90%;
   margin: auto;
   display: flex;

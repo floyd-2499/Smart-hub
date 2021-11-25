@@ -147,7 +147,21 @@
 .home2 {
   width: 90%;
   margin: auto;
-  height: 100vh;
+  height: auto;
+  margin-top: 40px;
+}
+
+.home2 .slider {
+  width: 100%;
+  min-height: 52vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-bottom: 100px;
+}
+
+.home2 .carousel-indicators {
+  display: none;
 }
 
 .home2 img {
@@ -156,7 +170,7 @@
 }
 
 .collections {
-  height: 100vh;
+  height: 97vh;
   width: 90%;
   margin: auto;
   display: -webkit-box;
