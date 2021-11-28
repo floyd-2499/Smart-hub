@@ -1,22 +1,26 @@
-import React from 'react'
+import React from "react";
 
-const Kids = () => {
-    return (
-        <div className="lists">
-            <div className="box">
-                <img src="" alt="" />
-                <div className="texts">
-                    <h1></h1>
-                    <p>Description</p>
-                    <h2>Rs.<span>749</span>/- <del>Rs.999</del></h2>
-                </div>
-            </div>
+const Kids = (props) => {
 
-            <div className="popup">
+    const {items} = props;
+    console.log(items);
 
-            </div>
+  return (
+
+        <div className="box">
+          <img src={items.img} alt={items.name} />
+          <div className="texts">
+            <h1>{items.name}</h1>
+            <p>{items.description}</p>
+            <h2>
+              Rs.<span>{items.price}</span>/- <del>Rs.{items.mrp}</del>
+            </h2>
+          </div>
+          <button>Add To WishList</button>
         </div>
-    )
-}
 
-export default Kids
+
+  );
+};
+
+export default Kids;

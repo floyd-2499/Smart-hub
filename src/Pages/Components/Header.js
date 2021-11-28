@@ -12,8 +12,8 @@ const Header = () => {
         <Link to="/">Home</Link>
         <Link to="/contact">Contact</Link>
         <Link to="/collections">Collections</Link>
-        <i class="fas fa-search"></i>
-        <i class="fas fa-heart"></i>
+        <i className="fas fa-search"></i>
+        <i className="fas fa-heart"></i>
       </div>
     </div>
   );

@@ -4,8 +4,12 @@ import Footer from "../Components/Footer";
 import Kids from "./Kids";
 import Mens from "./Mens";
 import Women from "./Women";
+import data from "../../Data/CollectionsData";
 
 const CollectionPage = () => {
+
+  console.log(data);
+
   return (
     <div>
       <Header />
@@ -14,12 +18,15 @@ const CollectionPage = () => {
         <div className="search">
           <input type="text" placeholder="Search here" />
           <div className="icon">
-            <i class="fas fa-search"></i>
+            <i className="fas fa-search"></i>
           </div>
         </div>
       </div>
-
-      <Kids />
+      <div className="collection-lists">
+        {data.map((product) => {
+          return <Kids key={product.id} items={product}> </Kids>
+        })}
+      </div>
       <Mens />
       <Women />
       <Footer />

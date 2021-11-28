@@ -2,6 +2,7 @@ import React from "react";
 import contact from '../images/contact.png';
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
+import "../scss/_contact.scss";
 
 const Contact = () => {
   return (

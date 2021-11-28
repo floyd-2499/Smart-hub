@@ -7,8 +7,6 @@ const Footer = () => {
       <div className="container">
         <div className="options">
           <h1>Collections...</h1>
-     
-          
 
           <div className="links">
             <div className="column">
@@ -33,7 +31,7 @@ const Footer = () => {
               <Link to=" /">Jeans</Link>
               <Link to=" /">Dress</Link>
               <Link to=" /">Inner Wears</Link>
-              <Link to=" /">Lehenga</Link>
+              <Link to=" /">Clothing Sets</Link>
             </div>
             <div className="column">
               <h1>Links</h1>
@@ -49,13 +47,13 @@ const Footer = () => {
           <h1>The Smart Hub</h1>
           <div className="media-icons">
             <a href="">
-              <i class="fab fa-facebook"></i>
+              <i className="fab fa-facebook"></i>
             </a>
             <a href="">
-              <i class="fab fa-instagram"></i>
+              <i className="fab fa-instagram"></i>
             </a>
             <a href="">
-              <i class="fab fa-youtube"></i>
+              <i className="fab fa-youtube"></i>
             </a>
           </div>
           <p>Basthikar Complex</p>
@@ -67,7 +65,7 @@ const Footer = () => {
       </div>
 
       <div className="copyrights">
-          <p>© 2021 The Smart Hub | All rights reserved</p>
+        <p>© 2021 The Smart Hub | All rights reserved</p>
       </div>
     </div>
   );

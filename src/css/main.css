@@ -698,6 +698,103 @@
   font-weight: 300;
 }
 
+.collection-lists {
+  width: 90%;
+  min-height: 100vh;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.collection-lists .box {
+  width: 300px;
+  height: 620px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #FCDCD4;
+  border-radius: 10px;
+  margin: 10px auto;
+}
+
+.collection-lists .box img {
+  width: 100%;
+  height: auto;
+  margin: 0%;
+  margin-bottom: 10px;
+}
+
+.collection-lists .box .texts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 95%;
+  margin: auto;
+  height: auto;
+}
+
+.collection-lists .box .texts h1 {
+  font-size: 32px;
+  font-weight: 500;
+  color: #655552;
+  margin-bottom: 10px;
+}
+
+.collection-lists .box .texts p {
+  color: #756562;
+  font-weight: 300;
+  font-size: 18px;
+  text-align: center;
+}
+
+.collection-lists .box .texts h2 {
+  font-size: 24px;
+  color: #655552;
+}
+
+.collection-lists .box .texts h2 span {
+  font-size: 32px;
+}
+
+.collection-lists .box .texts h2 del {
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.collection-lists .box button {
+  width: 100%;
+  text-align: center;
+  background-color: #655552;
+  color: #fff;
+  padding: 10px 0px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 0%;
+  font-size: 24px;
+}
+
 * {
   padding: 0px;
   margin: 0px;
