@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../Components/Footer";
 import HomePart1 from "./HomePart1";
 import HomePart2 from "./HomePart2";
 import HomePart3 from "./HomePart3";
@@ -14,7 +15,8 @@ const Home = () => {
       <HomePart3 />
       <HomePart4 />
       <HomePart5 />
-      <HomePart6/>
+      <HomePart6 />
+      <Footer />
     </div>
   );
 };

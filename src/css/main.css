@@ -147,21 +147,8 @@
 .home2 {
   width: 90%;
   margin: auto;
-  height: auto;
+  height: 100vh;
   margin-top: 40px;
-}
-
-.home2 .slider {
-  width: 100%;
-  min-height: 52vh;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  margin-bottom: 100px;
-}
-
-.home2 .carousel-indicators {
-  display: none;
 }
 
 .home2 img {
@@ -170,7 +157,7 @@
 }
 
 .collections {
-  height: 97vh;
+  height: 100vh;
   width: 90%;
   margin: auto;
   display: -webkit-box;
@@ -348,6 +335,367 @@
 
 .header .links i:hover {
   color: #756562;
+}
+
+.footer {
+  margin-top: 75px;
+  width: 100%;
+  height: 60vh;
+  background-color: #F7F1EC;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 90%;
+  margin: auto;
+}
+
+.footer .container .options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 70%;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  flex-direction: column;
+  width: 70%;
+}
+
+.footer .container .options h1 {
+  font-size: 34px;
+  font-weight: 400;
+  width: 100%;
+  text-align: start;
+  color: #655552;
+  margin-bottom: 30px;
+}
+
+.footer .container .options .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+}
+
+.footer .container .options .links .column {
+  width: 23%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer .container .options .links .column h1 {
+  font-size: 28px;
+  font-weight: 400;
+  width: 100%;
+  text-align: start;
+  color: #655552;
+  margin: 10px 0px 20px 0px;
+}
+
+.footer .container .options .links .column a {
+  text-decoration: none;
+  font-size: 22px;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: start;
+  color: #756562;
+}
+
+.footer .container .media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 25%;
+  margin: 0px;
+  margin-bottom: -50px;
+}
+
+.footer .container .media h1 {
+  font-size: 40px;
+  text-align: center;
+  color: #655552;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.footer .container .media .media-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.footer .container .media .media-icons a {
+  text-decoration: none;
+}
+
+.footer .container .media .media-icons a i {
+  font-size: 34px;
+  color: #655552;
+}
+
+.footer .container .media .media-icons a i:hover {
+  color: #756562;
+}
+
+.footer .container .media p {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  color: #756562;
+}
+
+.footer .container .media p:last-child {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.footer .copyrights {
+  width: 100%;
+}
+
+.footer .copyrights p {
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  color: #756562;
+}
+
+.contact {
+  width: 100%;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(2.42%, #fcd7cf), color-stop(15.88%, #fdd8d0), color-stop(22.52%, #fcdbd4), color-stop(29.98%, #fadcd4), color-stop(37.09%, #fbdcd7), color-stop(42.91%, #fbded8), color-stop(49.21%, #fbdfdb), color-stop(53.75%, #fce0dc), color-stop(57.69%, #fae1dc), color-stop(62%, #fbdfdb), color-stop(66.68%, #fce0dc), color-stop(81.54%, #fad9d4), color-stop(88.91%, #fbd5d0), to(#f8ceca));
+  background: linear-gradient(180deg, #fcd7cf 2.42%, #fdd8d0 15.88%, #fcdbd4 22.52%, #fadcd4 29.98%, #fbdcd7 37.09%, #fbded8 42.91%, #fbdfdb 49.21%, #fce0dc 53.75%, #fae1dc 57.69%, #fbdfdb 62%, #fce0dc 66.68%, #fad9d4 81.54%, #fbd5d0 88.91%, #f8ceca 100%);
+  z-index: 0;
+  overflow: hidden;
+}
+
+.contact .background {
+  position: absolute;
+  bottom: 5%;
+  left: 0%;
+  z-index: 0;
+}
+
+.contact .background h1 {
+  color: #fff;
+  font-size: 230px;
+  opacity: 0.4;
+  line-height: 230px;
+}
+
+.contact .span1 {
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  bottom: -2%;
+  right: -2%;
+  border: 10px solid rgba(255, 255, 255, 0.35);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.contact .span2 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 8%;
+  right: 35%;
+  border: 7px solid rgba(255, 255, 255, 0.35);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+}
+
+.contact .span3 {
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  bottom: -18%;
+  left: 40%;
+  border: 10px solid rgba(255, 255, 255, 0.25);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.contact .span4 {
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  top: -18%;
+  left: 30%;
+  border: 10px solid rgba(255, 255, 255, 0.2);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.contact .contents {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0;
+}
+
+.contact .contents .left {
+  width: 50%;
+  height: 100%;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact .contents .left img {
+  width: 100%;
+  height: auto;
+  margin-top: -5px;
+}
+
+.contact .contents .right {
+  width: 50%;
+  height: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact .contents .right h1 {
+  font-size: 64px;
+  font-weight: 600;
+  color: #655552;
+}
+
+.contact .contents .right p {
+  margin-top: 10px;
+  font-size: 30px;
+  color: #756562;
+  font-weight: 300;
+  width: 70%;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.contact .contents .right .box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact .contents .right .box p {
+  font-size: 32px;
+  font-weight: 500;
+  margin-top: 0px;
+  color: #655552;
+}
+
+.contact .contents .right .box h2 {
+  font-size: 28px;
+  color: #756562;
+  font-weight: 300;
 }
 
 * {
