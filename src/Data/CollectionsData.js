@@ -1,10 +1,10 @@
-import Kids from "../Pages/Collections/Kids";
+import Kids from "../Pages/Collections/ItemBox";
 
 const data = [
   {
     id: 1,
     section: "Kids",
-    category: "T-Shirts",
+    category: "Shirts",
     name: "Hoodie",
     description: "Available for all age groups",
     price: 550,
@@ -14,17 +14,17 @@ const data = [
   {
     id: 2,
     section: "Kids",
-    category: "T-Shirts",
+    category: "Shirts",
     name: "T-Shirt",
     description: "Boys Spider T-Shirts",
     price: 260,
     mrp: 299,
-    img: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/10/16/99003f6b-9231-4c9c-b3dc-1716dc2af60d1602799578905-1.jpg",
+    img: "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/15238122/2021/8/24/d60e1f33-1e40-4df1-8378-1837c0e1082a1629785346782BONKIDSBoysMustardYellowPrintedPocketsSlimFitT-shirt1.jpg",
   },
   {
     id: 3,
     section: "Kids",
-    category: "T-Shirts",
+    category: "Shirts",
     name: "T-Shirts Combo",
     description: "Boys T-Shirts Combo Set",
     price: 650,
@@ -34,7 +34,7 @@ const data = [
   {
     id: 4,
     section: "Kids",
-    category: "T-Shirts",
+    category: "Shirts",
     name: "T-Shirts",
     description: "Boys Printed T-Shirts",
     price: 250,
@@ -44,7 +44,7 @@ const data = [
   {
     id: 5,
     section: "Kids",
-    category: "T-Shirts",
+    category: "Shirts",
     name: "T-Shirts",
     description: "Boys Printed T-Shirts ",
     price: 250,
@@ -54,7 +54,7 @@ const data = [
   {
     id: 6,
     section: "Kids",
-    category: "T-Shirts",
+    category: "Shirts",
     name: "Avengers",
     description: "Boys Printed T-Shirts ",
     price: 220,
@@ -64,7 +64,7 @@ const data = [
   {
     id: 7,
     section: "Kids",
-    category: "T-Shirts",
+    category: "Shirts",
     name: "Cotton T-Shirts",
     description: "Boys Yellow Cotton T-Shirts ",
     price: 250,
@@ -74,7 +74,7 @@ const data = [
   {
     id: 8,
     section: "Kids",
-    category: "T-Shirts",
+    category: "Shirts",
     name: "T- Shirts",
     description: "Printed T-Shirts ",
     price: 150,
@@ -84,7 +84,7 @@ const data = [
   {
     id: 9,
     section: "Kids",
-    category: "T-Shirts",
+    category: "Shirts",
     name: "Awesome Guy",
     description: "Printed T-Shirts ",
     price: 250,
@@ -94,7 +94,7 @@ const data = [
   {
     id: 10,
     section: "Kids",
-    category: "T-Shirts",
+    category: "Shirts",
     name: "T-Shirts Combo",
     description: "Boys T-Shirts Combo Set",
     price: 700,
@@ -104,7 +104,7 @@ const data = [
   {
     id: 11,
     section: "Kids",
-    category: "T-Shirts",
+    category: "Shirts",
     name: "Floral",
     description: "Girls Blue Floral Printed Cotton T-shirt",
     price: 149,
@@ -114,7 +114,7 @@ const data = [
   {
     id: 12,
     section: "Kids",
-    category: "T-Shirts",
+    category: "Shirts",
     name: "Coral Orange",
     description: "Girls Coral Orange & Black Printed",
     price: 249,
@@ -124,7 +124,7 @@ const data = [
   {
     id: 13,
     section: "Kids",
-    category: "T-Shirts",
+    category: "Shirts",
     name: "Navy Blue Extended",
     description: "Girls Navy Blue Typography Printed",
     price: 420,
@@ -134,7 +134,7 @@ const data = [
   {
     id: 14,
     section: "Kids",
-    category: "T-Shirts",
+    category: "Shirts",
     name: "Disney",
     description: "Girls Pink Cotton Minnie Mouse Printed",
     price: 349,
@@ -144,7 +144,7 @@ const data = [
   {
     id: 15,
     section: "Kids",
-    category: "T-Shirts",
+    category: "Shirts",
     name: "Adorable",
     description: "Girls Coral Pink Printed Round Neck T-shirt",
     price: 200,
@@ -154,7 +154,7 @@ const data = [
   {
     id: 16,
     section: "Kids",
-    category: "T-Shirts",
+    category: "Shirts",
     name: "Palm Tree",
     description: "2 Printed Applique T-shirt",
     price: 400,
@@ -164,7 +164,7 @@ const data = [
   {
     id: 17,
     section: "Kids",
-    category: "T-Shirts",
+    category: "Shirts",
     name: "Blue & White",
     description: "Navy Blue & White Printed",
     price: 249,
@@ -174,7 +174,7 @@ const data = [
   {
     id: 18,
     section: "Kids",
-    category: "T-Shirts",
+    category: "Shirts",
     name: "Pack Of 2",
     description: "Girls Pack Of 2 Printed T-shirt",
     price: 399,
@@ -514,7 +514,7 @@ const data = [
   {
     id: 52,
     section: "Men",
-    category: "T-Shirts",
+    category: "Shirts",
     name: "Roadster",
     description: "Men Black Cotton T-shirt",
     price: 199,
@@ -524,17 +524,17 @@ const data = [
   {
     id: 53,
     section: "Men",
-    category: "T-Shirts",
+    category: "Shirts",
     name: "Cotton T-shirt",
     description: "Navy Blue & Red Striped Cotton T-shirt",
     price: 389,
     mrp: 425,
-    img: "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/1996777/2017/11/7/11510046815508-Roadster-Men-Black-Solid-Round-Neck-T-shirt-4011510046815294-1.jpg",
+    img: "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11067734/2019/12/10/2c445402-038d-4e7d-b07f-62284a09f4a01575972547961-DILLINGER-Men-Tshirts-4071575972546110-3.jpg",
   },
   {
     id: 54,
     section: "Men",
-    category: "T-Shirts",
+    category: "Shirts",
     name: "Cotton T-shirt",
     description: "Men Blue Colour-blocked Cotton T-shirt",
     price: 429,
@@ -544,7 +544,7 @@ const data = [
   {
     id: 55,
     section: "Men",
-    category: "T-Shirts",
+    category: "Shirts",
     name: "Floral Printed",
     description: "Blue & White Pure Cotton Polo Collar T-shirt",
     price: 499,
@@ -639,7 +639,7 @@ const data = [
     description: " Blue Slim Fit Jeans",
     price: 680,
     mrp: 799,
-    img: "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/8629551/2019/2/18/cc657436-c58c-4a78-a51c-8f966857ddd01550489916594-Roadster-Men-Blue-Slim-Fit-Mid-Rise-Clean-Look-Jeans-4191550-1.jpg",
+    img: "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/8629551/2019/2/18/cc657436-c58c-4a78-a51c-8f966857ddd01550489916594-Roadster-Men-Blue-Slim-Fit-Mid-Rise-Clean-LooJeans-4191550-1.jpg",
   },
   {
     id: 65,
@@ -911,7 +911,16 @@ const data = [
     mrp: 199,
     img: "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/productimage/2021/1/12/95f94f23-5a55-4dff-b033-1725145af8bd1610462271766-4.jpg",
   },
+  {
+    id: 92,
+    section: "Men",
+    category: "Inner Wears",
+    name: "Dollar Briefs",
+    description: "Solid Trunks",
+    price: 120,
+    mrp: 199,
+    img: "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/productimage/2021/1/12/95f94f23-5a55-4dff-b033-1725145af8bd1610462271766-4.jpg",
+  },
 ];
-
 
 export default data;

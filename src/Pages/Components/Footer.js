@@ -1,7 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { actionTypes } from "../FilterReducer/action";
+import item from "../../Data/CollectionsData";
 
-const Footer = () => {
+const Footer = (props) => {
+  const { setCatList} = props;
+
+  const mensList = item.filter((x) => x.section === "Men");
+  const filterMensList = (category) => {
+    const menList = mensList.filter(
+      (data) => data.category === category
+    );
+    setCatList(menList);
+    
+  };
+
+  const mLinks = [...new Set(mensList.map((item) => item.category))]
+
+
+
   return (
     <div className="footer">
       <div className="container">
@@ -11,35 +29,41 @@ const Footer = () => {
           <div className="links">
             <div className="column">
               <h1>Men</h1>
-              <Link to=" /">T-Shirts</Link>
-              <Link to=" /">Shirts</Link>
-              <Link to=" /">Jeans</Link>
-              <Link to=" /">Hoodies</Link>
-              <Link to=" /">Inner Wears</Link>
+              <div>
+                {mLinks.map((category, index) => {
+                  return (
+                    <Link to="/collections" key={index}>
+                      <div onClick={() => filterMensList(category)}>
+                        {category}
+                      </div>
+                    </Link>
+                  );
+                })}
+              </div>
             </div>
             <div className="column">
               <h1>Women</h1>
-              <Link to=" /">Kurtis</Link>
-              <Link to=" /">Sarees</Link>
-              <Link to=" /">Jeans</Link>
-              <Link to=" /">Tops</Link>
-              <Link to=" /">Inner Wears</Link>
+              <Link to="/collections">Kurtis</Link>
+              <Link to="/collections">Sarees</Link>
+              <Link to="/collections">Jeans</Link>
+              <Link to="/collections">Tops</Link>
+              <Link to="/collections">Inner Wears</Link>
             </div>
             <div className="column">
               <h1>Kids</h1>
-              <Link to=" /">Shirts</Link>
-              <Link to=" /">Jeans</Link>
-              <Link to=" /">Dress</Link>
-              <Link to=" /">Inner Wears</Link>
-              <Link to=" /">Clothing Sets</Link>
+              <Link to="/collections">Shirts</Link>
+              <Link to="/collections">Jeans</Link>
+              <Link to="/collections">Dress</Link>
+              <Link to="/collections">Inner Wears</Link>
+              <Link to="/collections">Clothing Sets</Link>
             </div>
             <div className="column">
               <h1>Links</h1>
-              <Link to=" /">Home</Link>
-              <Link to=" /">Contact</Link>
-              <Link to=" /">Favorites</Link>
-              <Link to=" /">Collections</Link>
-              <Link to=" /">Search</Link>
+              <Link to="/collections">Home</Link>
+              <Link to="/collections">Contact</Link>
+              <Link to="/collections">Favorites</Link>
+              <Link to="/collections">Collections</Link>
+              <Link to="/collections">Search</Link>
             </div>
           </div>
         </div>

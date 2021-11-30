@@ -1,76 +1,91 @@
 @import "./variables";
 
-.collection-lists{
-    width: 90%;
-    min-height: 100vh;
-    margin: auto;
+.collection-lists {
+  width: 90%;
+  min-height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  .box {
+    width: 200px;
+    height: 500px;
     display: flex;
-    flex-wrap: wrap;
-    
-
-    .box{
-        width: 300px;
-        height: 620px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: column;
-        background-color: $background;
-        border-radius: 10px;
-        margin: 10px auto;
-
-        img{
-            width: 100%;
-            height: auto;
-            margin: 0%;
-            margin-bottom: 10px;
-        }
-        .texts{
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            width: 95%;
-            margin: auto;
-            height: auto;
-
-            h1{
-                font-size: 32px;
-                font-weight: 500;
-                color: $dark-text;
-                margin-bottom: 10px;
-            }
-            p{
-                color: $light-text;
-                font-weight: 300;
-                font-size: 18px;
-                text-align: center;
-            }
-            h2{
-                font-size: 24px;
-                color: $dark-text;
-
-                span{
-                    font-size: 32px;
-                }
-                del{
-                    font-size: 22px;
-                    font-weight: 300;
-                }
-            }
-
-        }
-        button{
-            width: 100%;
-            text-align: center;
-            background-color: $dark-text;
-            color: #fff;
-            padding: 10px 0px;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            border-radius: 5px;
-            margin: 0%;
-            font-size: 24px;
-        }
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: $background;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 0%;
+    box-shadow: 2px 2px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    // border:  2px solid #FFFFFF;
+    &:hover {
+      transform: scale(1.1);
     }
+
+    img {
+      width: 100%;
+      height: auto;
+      margin: 0%;
+      margin-bottom: 10px;
+      border-radius: 10px 10px 0px 0px;
+    }
+    .texts {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      width: 95%;
+      margin: auto;
+      height: auto;
+
+      h1 {
+        font-size: 28px;
+        font-weight: 500;
+        color: $dark-text;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+      p {
+        color: $light-text;
+        font-weight: 300;
+        font-size: 16px;
+        text-align: center;
+      }
+      h2 {
+        font-size: 22px;
+        color: $dark-text;
+        font-weight: 400;
+
+        span {
+          font-size: 32px;
+          font-weight: 600;
+        }
+        del {
+          font-size: 18px;
+          font-weight: 300;
+        }
+      }
+    }
+    button {
+      width: 100%;
+      text-align: center;
+      background-color: $dark-text;
+      color: #fff;
+      padding: 10px 0px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      border-radius: 0px 0px 5px 5px;
+      margin: 0%;
+      font-size: 18px;
+      i{
+          font-size: 16px;
+          margin-right: 10px;
+      }
+    }
+  }
 }

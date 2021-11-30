@@ -1,14 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
-import Kids from "./Kids";
-import Mens from "./Mens";
-import Women from "./Women";
-import data from "../../Data/CollectionsData";
+import ItemBox from "./ItemBox";
+import ItemData from "../../Data/CollectionsData";
 
 const CollectionPage = () => {
 
-  console.log(data);
+
+  const filterCategory = [...new Set(ItemData.map((item) => item.category))];
+  const filterSection = [...new Set(ItemData.map((item) => item.section))];
+  const list = JSON.parse(localStorage.getItem('item-list'));
+
+  const [catList, setCatList] = useState(list);
+  const categories = filterCategory;
+  const sections = filterSection;
+
+  const filter = (category) => {
+    const filteredCatList = ItemData.filter(
+      (data) => data.category === category
+    );
+    setCatList(filteredCatList);
+  };
+
+  const filterSec = (section) => {
+    const filteredSec = ItemData.filter((data) => data.section === section);
+    setCatList(filteredSec);
+  };
+
+  // const mensList = ItemData.filter((x) => x.section === "Men");
+  // const filterMensList = (category) => {
+  //   const menList = mensList.filter(
+  //     (data) => data.category === category
+  //   );
+  //   setCatList(menList);
+  // };
+
+  
+  console.log(list);
+
 
   return (
     <div>
@@ -21,15 +50,44 @@ const CollectionPage = () => {
             <i className="fas fa-search"></i>
           </div>
         </div>
+        <div>
+          {categories.map((category, index) => {
+            return (
+              <div
+                key={index}
+                className="filter-btn"
+                onClick={() => filter(category)}
+              >
+                {category}
+              </div>
+            );
+          })}
+        </div>
+        <div>
+          {sections.map((section, index) => {
+            return (
+              <div
+                key={index}
+                className="filter-btn"
+                onClick={() => filterSec(section)}
+              >
+                {section}
+              </div>
+            );
+          })}
+        </div>
       </div>
       <div className="collection-lists">
-        {data.map((product) => {
-          return <Kids key={product.id} items={product}> </Kids>
+        {catList.map((product) => {
+          return (
+            <ItemBox key={product.id} items={product}>
+              {" "}
+            </ItemBox>
+          );
         })}
       </div>
-      <Mens />
-      <Women />
-      <Footer />
+
+      <Footer   setCatList={setCatList} />
     </div>
   );
 };

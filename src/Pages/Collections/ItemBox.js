@@ -1,9 +1,8 @@
 import React from "react";
 
-const Kids = (props) => {
+const ItemBox = (props) => {
 
     const {items} = props;
-    console.log(items);
 
   return (
 
@@ -16,11 +15,11 @@ const Kids = (props) => {
               Rs.<span>{items.price}</span>/- <del>Rs.{items.mrp}</del>
             </h2>
           </div>
-          <button>Add To WishList</button>
+          <button><i className="far fa-heart"></i>Add To WishList</button>
         </div>
 
 
   );
 };
 
-export default Kids;
+export default ItemBox;

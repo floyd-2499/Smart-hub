@@ -195,8 +195,14 @@
           flex-direction: row;
 }
 
-.collections .contents .box {
+.collections .contents a {
+  text-decoration: none;
   width: 23%;
+  height: auto;
+}
+
+.collections .contents .box {
+  width: 100%;
   height: 450px;
   background-color: #FCDCD4;
   display: -webkit-box;
@@ -212,11 +218,24 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  border-radius: 10px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-box-shadow: 2px 2px 32px rgba(0, 0, 0, 0.1);
+          box-shadow: 2px 2px 32px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.collections .contents .box:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .collections .contents .box img {
   width: 100%;
   height: 400px;
+  margin: 0%;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .collections .contents .box p {
@@ -710,8 +729,8 @@
 }
 
 .collection-lists .box {
-  width: 300px;
-  height: 620px;
+  width: 200px;
+  height: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -727,7 +746,18 @@
           flex-direction: column;
   background-color: #FCDCD4;
   border-radius: 10px;
-  margin: 10px auto;
+  margin: 20px auto;
+  padding: 0%;
+  -webkit-box-shadow: 2px 2px 32px rgba(0, 0, 0, 0.1);
+          box-shadow: 2px 2px 32px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.collection-lists .box:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .collection-lists .box img {
@@ -735,6 +765,7 @@
   height: auto;
   margin: 0%;
   margin-bottom: 10px;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .collection-lists .box .texts {
@@ -744,6 +775,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -754,30 +788,33 @@
 }
 
 .collection-lists .box .texts h1 {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 500;
   color: #655552;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .collection-lists .box .texts p {
   color: #756562;
   font-weight: 300;
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
 }
 
 .collection-lists .box .texts h2 {
-  font-size: 24px;
+  font-size: 22px;
   color: #655552;
+  font-weight: 400;
 }
 
 .collection-lists .box .texts h2 span {
   font-size: 32px;
+  font-weight: 600;
 }
 
 .collection-lists .box .texts h2 del {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 300;
 }
 
@@ -790,9 +827,14 @@
   border: none;
   outline: none;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 0px 0px 5px 5px;
   margin: 0%;
-  font-size: 24px;
+  font-size: 18px;
+}
+
+.collection-lists .box button i {
+  font-size: 16px;
+  margin-right: 10px;
 }
 
 * {
