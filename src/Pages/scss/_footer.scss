@@ -46,9 +46,10 @@
 
         .column {
           width: 23%;
+          height: 40vh;
           display: flex;
-          align-items: flex-start;
-          justify-content: space-between;
+          align-items: center;
+          justify-content: flex-start;
           flex-direction: column;
 
           h1 {

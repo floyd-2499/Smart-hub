@@ -2,7 +2,8 @@ import { takeEvery } from "redux-saga/effects";
 import { actionTypes } from "./action";
 
 function* getListSaga({ payload, category }) {
-    let myFilter = payload.filter((item) => item.category === category);
+  let myList = payload.filter((item) => item.section === "Men");
+    let myFilter = myList.filter((item) => item.category === category);
   yield localStorage.setItem('item-list', JSON.stringify(myFilter));
 }
 

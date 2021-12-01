@@ -1,4 +1,4 @@
-import { actionTypes } from "./action";
+import {actionTypes} from "./action";
 
 export const initialState = {
     loading: false,
@@ -8,18 +8,18 @@ export const initialState = {
 
 const getKidsList = (state = initialState, action) => {
     switch (action.type) {
-        case actionTypes.GET_FILTERED:
-            return {
-                ...state,
-                loading: true,
-            }
-        case actionTypes.GET_FILTERED_SUCCESS:
+        case actionTypes.GET_FILTERED_KIDS: 
+        return {
+            ...state,
+            loading: true,
+        }
+        case actionTypes.GET_FILTERED_KIDS_SUCCESS:
             return {
                 ...state,
                 loading: false,
                 items: action.payload
             }
-        case actionTypes.GET_FILTERED_FAIL:
+        case actionTypes.GET_FILTERED_KIDS_FAIL:
             return {
                 ...state,
                 loading: false,

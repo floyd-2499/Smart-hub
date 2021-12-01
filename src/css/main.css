@@ -442,15 +442,16 @@
 
 .footer .container .options .links .column {
   width: 23%;
+  height: 40vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -715,6 +716,88 @@
   font-size: 28px;
   color: #756562;
   font-weight: 300;
+}
+
+.top-nav {
+  width: 90%;
+  margin: 30px auto;
+}
+
+.top-nav .search {
+  width: 75%;
+  height: 50px;
+  background-color: #fff;
+  -webkit-box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+          box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.top-nav .search input {
+  width: 90%;
+  border: none;
+  outline: none;
+  text-indent: 20px;
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #655552;
+}
+
+.top-nav .search .icon {
+  font-size: 28px;
+  width: 10%;
+  height: 100%;
+  background-color: #FCDCD4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.top-nav .search .icon i {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  color: #655552;
+}
+
+.top-nav .filter-btn {
+  width: 80%;
+  height: 50px;
+  margin: 20px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.top-nav .filter-btn p {
+  font-size: 24px;
+  color: #655552;
+  cursor: pointer;
 }
 
 .collection-lists {

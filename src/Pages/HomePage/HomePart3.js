@@ -31,10 +31,8 @@ const HomePart3 = () => {
       payload: item,
       category: name,
     });
-
-
-
   };
+
   return (
     <div className="collections">
       <h1>-- Men's Collection --</h1>

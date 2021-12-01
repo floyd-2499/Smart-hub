@@ -1,24 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { actionTypes } from "../FilterReducer/action";
 import item from "../../Data/CollectionsData";
 
-const Footer = (props) => {
-  const { setCatList} = props;
-
+const Footer = () => {
   const mensList = item.filter((x) => x.section === "Men");
+  const kidsList = item.filter((x) => x.section === "Kids");
+
   const filterMensList = (category) => {
-    const menList = mensList.filter(
-      (data) => data.category === category
-    );
-    setCatList(menList);
-    
+    const menList = mensList.filter((data) => data.category === category);
+    localStorage.setItem("item-list", JSON.stringify(menList));
   };
 
-  const mLinks = [...new Set(mensList.map((item) => item.category))]
+  const filterKidsList = (category) => {
+    const kidList = kidsList.filter((data) => data.category === category);
+    console.log(category);
+    localStorage.setItem("item-list", JSON.stringify(kidList));
+  };
 
-
+  const mLinks = [...new Set(mensList.map((item) => item.category))];
+  const kLinks = [...new Set(kidsList.map((item) => item.category))];
 
   return (
     <div className="footer">
@@ -29,41 +29,48 @@ const Footer = (props) => {
           <div className="links">
             <div className="column">
               <h1>Men</h1>
-              <div>
-                {mLinks.map((category, index) => {
-                  return (
-                    <Link to="/collections" key={index}>
-                      <div onClick={() => filterMensList(category)}>
-                        {category}
-                      </div>
-                    </Link>
-                  );
-                })}
-              </div>
+
+              {mLinks.map((category, index) => {
+                return (
+                  <Link to="/collections" key={index}>
+                    <div
+                      onClick={() => {
+                        filterMensList(category);
+                      }}
+                    >
+                      {category}
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
             <div className="column">
               <h1>Women</h1>
-              <Link to="/collections">Kurtis</Link>
-              <Link to="/collections">Sarees</Link>
-              <Link to="/collections">Jeans</Link>
-              <Link to="/collections">Tops</Link>
-              <Link to="/collections">Inner Wears</Link>
-            </div>
-            <div className="column">
-              <h1>Kids</h1>
-              <Link to="/collections">Shirts</Link>
-              <Link to="/collections">Jeans</Link>
-              <Link to="/collections">Dress</Link>
-              <Link to="/collections">Inner Wears</Link>
-              <Link to="/collections">Clothing Sets</Link>
-            </div>
-            <div className="column">
-              <h1>Links</h1>
               <Link to="/collections">Home</Link>
               <Link to="/collections">Contact</Link>
               <Link to="/collections">Favorites</Link>
               <Link to="/collections">Collections</Link>
               <Link to="/collections">Search</Link>
+            </div>
+            <div className="column">
+              <h1>Kids</h1>
+              {kLinks.map((category, index) => {
+                return (
+                  <Link to="/collections" key={index}>
+                    <div onClick={() => filterKidsList(category)}>
+                      {category}
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+            <div className="column">
+              <h1>Links</h1>
+              <Link to="/">Home</Link>
+              <Link to="/contact">Contact</Link>
+              <Link to="/collections">Favorites</Link>
+              <Link to="/collections">Collections</Link>
+
             </div>
           </div>
         </div>

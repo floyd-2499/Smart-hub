@@ -5,11 +5,9 @@ import ItemBox from "./ItemBox";
 import ItemData from "../../Data/CollectionsData";
 
 const CollectionPage = () => {
-
-
   const filterCategory = [...new Set(ItemData.map((item) => item.category))];
   const filterSection = [...new Set(ItemData.map((item) => item.section))];
-  const list = JSON.parse(localStorage.getItem('item-list'));
+  const list = JSON.parse(localStorage.getItem("item-list"));
 
   const [catList, setCatList] = useState(list);
   const categories = filterCategory;
@@ -27,18 +25,6 @@ const CollectionPage = () => {
     setCatList(filteredSec);
   };
 
-  // const mensList = ItemData.filter((x) => x.section === "Men");
-  // const filterMensList = (category) => {
-  //   const menList = mensList.filter(
-  //     (data) => data.category === category
-  //   );
-  //   setCatList(menList);
-  // };
-
-  
-  console.log(list);
-
-
   return (
     <div>
       <Header />
@@ -50,29 +36,21 @@ const CollectionPage = () => {
             <i className="fas fa-search"></i>
           </div>
         </div>
-        <div>
-          {categories.map((category, index) => {
+        <div className="filter-btn">
+          {sections.map((section, index) => {
             return (
-              <div
-                key={index}
-                className="filter-btn"
-                onClick={() => filter(category)}
-              >
-                {category}
-              </div>
+              <p key={index} onClick={() => filterSec(section)}>
+                {section}
+              </p>
             );
           })}
         </div>
-        <div>
-          {sections.map((section, index) => {
+        <div className="filter-btn">
+          {categories.map((category, index) => {
             return (
-              <div
-                key={index}
-                className="filter-btn"
-                onClick={() => filterSec(section)}
-              >
-                {section}
-              </div>
+              <p key={index} onClick={() => filter(category)}>
+                {category}
+              </p>
             );
           })}
         </div>
@@ -87,7 +65,7 @@ const CollectionPage = () => {
         })}
       </div>
 
-      <Footer   setCatList={setCatList} />
+      <Footer />
     </div>
   );
 };
