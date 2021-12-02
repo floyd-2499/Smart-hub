@@ -1,15 +1,29 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import ItemBox from "./ItemBox";
 import ItemData from "../../Data/CollectionsData";
 
 const CollectionPage = () => {
-  const filterCategory = [...new Set(ItemData.map((item) => item.category))];
-  const filterSection = [...new Set(ItemData.map((item) => item.section))];
+  const [catList, setCatList] = useState(ItemData);
+  const [searchItem, setSearchItem] = useState("");
   const list = JSON.parse(localStorage.getItem("item-list"));
+  useEffect(() => {
+    if (list) {
+      setCatList(list);
+    } else {
+      setCatList(ItemData);
+    }
 
-  const [catList, setCatList] = useState(list);
+    return;
+  }, []);
+
+  const filterCategory = [...new Set(ItemData.map((item) => item.category))];
+  const filterSection = [
+    "All",
+    ...new Set(ItemData.map((item) => item.section)),
+  ];
   const categories = filterCategory;
   const sections = filterSection;
 
@@ -21,9 +35,14 @@ const CollectionPage = () => {
   };
 
   const filterSec = (section) => {
+    if (section === "All") {
+      setCatList(ItemData);
+      return;
+    }
     const filteredSec = ItemData.filter((data) => data.section === section);
     setCatList(filteredSec);
   };
+
 
   return (
     <div>
@@ -31,7 +50,14 @@ const CollectionPage = () => {
 
       <div className="top-nav">
         <div className="search">
-          <input type="text" placeholder="Search here" />
+          <input
+            type="text"
+            placeholder="Search here"
+            onChange={(e) => {
+              setSearchItem(e.target.value);
+              setCatList(ItemData);
+            }}
+          />
           <div className="icon">
             <i className="fas fa-search"></i>
           </div>
@@ -56,13 +82,29 @@ const CollectionPage = () => {
         </div>
       </div>
       <div className="collection-lists">
-        {catList.map((product) => {
-          return (
-            <ItemBox key={product.id} items={product}>
-              {" "}
-            </ItemBox>
-          );
-        })}
+        {catList
+          .filter((val) => {
+            if (searchItem === "") {
+              return val;
+            } else if (
+              val.category
+                .toLowerCase()
+                .includes(searchItem.toLocaleLowerCase())
+            ) {
+              return val;
+            } else if (
+              val.name.toLowerCase().includes(searchItem.toLowerCase())
+            ) {
+              return val;
+            } else if (
+              val.section.toLowerCase().includes(searchItem.toLowerCase())
+            ) {
+              return val;
+            }
+          })
+          .map((product) => {
+            return <ItemBox key={product.id} items={product}></ItemBox>;
+          })}
       </div>
 
       <Footer />

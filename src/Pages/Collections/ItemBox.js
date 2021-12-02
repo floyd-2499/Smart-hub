@@ -1,9 +1,18 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { actionTypes } from "../Favorites/reducers/action";
 
 const ItemBox = (props) => {
+  const {items} = props;
+  const dispatch = useDispatch();
 
-    const {items} = props;
-
+  const addFav = () => {
+    dispatch ({
+      type: actionTypes.GET_FAVORITE_SUCCESS,
+      payload: items,
+    })
+  }
+  
   return (
 
         <div className="box">
@@ -15,7 +24,7 @@ const ItemBox = (props) => {
               Rs.<span>{items.price}</span>/- <del>Rs.{items.mrp}</del>
             </h2>
           </div>
-          <button><i className="far fa-heart"></i>Add To WishList</button>
+          <button onClick={() => addFav()}><i className="far fa-heart"></i>Add To WishList</button>
         </div>
 
 

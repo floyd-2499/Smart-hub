@@ -1,0 +1,121 @@
+@import "./variables";
+
+.fav {
+  width: 90%;
+  margin: auto;
+  min-height: 60vh;
+  display: flex;
+  flex-wrap: wrap;
+
+  .emptyList {
+    width: 50%;
+    height: 80vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    img{
+      width: 60%;
+      margin: auto;
+    }
+    h1{
+      font-size: 36px;
+      color: $dark-text;
+    }
+
+    a{
+      text-decoration: none;
+      font-size: 22px;
+      color: $light-text;
+      cursor: pointer;
+
+      &:hover {
+        color: $dark-text;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &-box {
+    width: 40%;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    box-shadow: 1px 1px 10px rgba(39, 33, 33, 0.1);
+    border-radius: 12px;
+    margin: 30px auto;
+
+    img {
+      height: 100%;
+      width: auto;
+      min-width: 200px;
+      margin: 0;
+      border-radius: 12px;
+    }
+
+    .texts {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      height: 85%;
+      margin: auto;
+      margin-left: 10px;
+
+      h1 {
+        font-size: 36px;
+        color: $dark-text;
+        font-weight: 600;
+        width: 100%;
+        text-align: left;
+        margin: 7px 0;
+      }
+      p {
+        font-size: 20px;
+        color: $light-text;
+        margin: 0%;
+      }
+      h2 {
+        color: $dark-text;
+        font-size: 30px;
+        font-weight: 300;
+        width: 100%;
+        text-align: left;
+
+        span {
+          font-size: 36px;
+          font-weight: 600;
+        }
+      }
+      div {
+        width: 90%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+
+        button {
+          outline: none;
+          border: none;
+          width: 55px;
+          height: 55px;
+          background-color: $dark-text;
+          border-radius: 50%;
+          margin: 0%;
+          box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.25);
+          cursor: pointer;
+
+          i {
+            color: #fff;
+            font-size: 22px;
+          }
+
+          &:hover {
+            box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25),
+              inset 2px 2px 4px rgba(0, 0, 0, 0.25);
+          }
+        }
+      }
+    }
+  }
+}

@@ -13,7 +13,6 @@ const Footer = () => {
 
   const filterKidsList = (category) => {
     const kidList = kidsList.filter((data) => data.category === category);
-    console.log(category);
     localStorage.setItem("item-list", JSON.stringify(kidList));
   };
 
@@ -46,11 +45,10 @@ const Footer = () => {
             </div>
             <div className="column">
               <h1>Women</h1>
-              <Link to="/collections">Home</Link>
-              <Link to="/collections">Contact</Link>
+              <Link to="/">Home</Link>
+              <Link to="/contact">Contact</Link>
               <Link to="/collections">Favorites</Link>
               <Link to="/collections">Collections</Link>
-              <Link to="/collections">Search</Link>
             </div>
             <div className="column">
               <h1>Kids</h1>
@@ -68,9 +66,8 @@ const Footer = () => {
               <h1>Links</h1>
               <Link to="/">Home</Link>
               <Link to="/contact">Contact</Link>
-              <Link to="/collections">Favorites</Link>
+              <Link to="/favs">Favorites</Link>
               <Link to="/collections">Collections</Link>
-
             </div>
           </div>
         </div>
