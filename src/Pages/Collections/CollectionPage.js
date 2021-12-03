@@ -71,10 +71,10 @@ const CollectionPage = () => {
             );
           })}
         </div>
-        <div className="filter-btn">
+        <div className="filter-btn2">
           {categories.map((category, index) => {
             return (
-              <p key={index} onClick={() => filter(category)}>
+              <p key={index}  onClick={() => filter(category)}>
                 {category}
               </p>
             );

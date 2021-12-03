@@ -21,11 +21,12 @@ const Contact = () => {
 
             <div className="box">
               <h2>Call Us</h2>
-              <p>+91 88613 61726</p>
+              <p><i class="fas fa-phone-alt"></i> +91 88613 61726</p>
+              <p><i class="fab fa-whatsapp"></i> +91 87221 88374</p>
             </div>
             <div className="box">
               <h2>Mail Us</h2>
-              <p>smarthub@gmail.com</p>
+              <p>smarthub.mangalore@gmail.com</p>
             </div>
           </div>
         </div>

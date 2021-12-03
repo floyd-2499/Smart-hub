@@ -2,3 +2,30 @@ $dark-text: #655552;
 $light-text: #756562;
 $background: #FCDCD4;
 $footer: #F7F1EC;
+
+
+@mixin media-md {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+@mixin media-lg{
+    @media screen and (max-width: 970px) {
+        @content;
+    }
+}
+@mixin media-xl {
+    @media screen and (max-width: 1266px) {
+        @content;
+    }
+}
+@mixin media-sm {
+    @media screen and (max-width: 550px) {
+        @content;
+    }
+}
+@mixin media-mobile {
+    @media screen and (max-width: 360px) {
+        @content;
+    }
+}

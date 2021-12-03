@@ -8,6 +8,11 @@
   align-items: center;
   justify-content: space-between;
 
+  .bar{
+    display: none;
+    z-index: 3;
+  }
+
   .logo {
     width: 25%;
     margin: 0;
@@ -55,6 +60,46 @@
       &:hover {
         color: $light-text;
       }
+    }
+  }
+}
+
+
+.mobile-links {
+  z-index: 4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: $background;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .btn {
+    width: 85%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    i {
+      font-size: 30px;
+      margin: 0%;
+      color: $dark-text;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 30px;
+    color: $dark-text;
+    font-weight: 500;
+    cursor: pointer;
+
+    &:hover {
+      color: $light-text;
     }
   }
 }

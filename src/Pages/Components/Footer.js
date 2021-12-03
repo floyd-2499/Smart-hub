@@ -5,6 +5,7 @@ import item from "../../Data/CollectionsData";
 const Footer = () => {
   const mensList = item.filter((x) => x.section === "Men");
   const kidsList = item.filter((x) => x.section === "Kids");
+  const womenList = item.filter((x) => x.section === "Women");
 
   const filterMensList = (category) => {
     const menList = mensList.filter((data) => data.category === category);
@@ -15,9 +16,14 @@ const Footer = () => {
     const kidList = kidsList.filter((data) => data.category === category);
     localStorage.setItem("item-list", JSON.stringify(kidList));
   };
+  const filterWomenList = (category) => {
+    const wList = womenList.filter((data) => data.category === category);
+    localStorage.setItem("item-list", JSON.stringify(wList));
+  };
 
   const mLinks = [...new Set(mensList.map((item) => item.category))];
   const kLinks = [...new Set(kidsList.map((item) => item.category))];
+  const wLinks = [...new Set(womenList.map((item) => item.category))];
 
   return (
     <div className="footer">
@@ -45,10 +51,15 @@ const Footer = () => {
             </div>
             <div className="column">
               <h1>Women</h1>
-              <Link to="/">Home</Link>
-              <Link to="/contact">Contact</Link>
-              <Link to="/collections">Favorites</Link>
-              <Link to="/collections">Collections</Link>
+              {wLinks.map((category, index) => {
+                return (
+                  <Link to="/collections" key={index}>
+                    <div onClick={() => filterWomenList(category)}>
+                      {category}
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
             <div className="column">
               <h1>Kids</h1>
@@ -72,7 +83,9 @@ const Footer = () => {
           </div>
         </div>
         <div className="media">
-          <h1>The Smart Hub</h1>
+          <Link to="/">
+            <h1>The Smart Hub</h1>
+          </Link>
           <div className="media-icons">
             <a href="">
               <i className="fab fa-facebook"></i>

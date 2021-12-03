@@ -1,0 +1,86 @@
+@import "../variables";
+
+@include media-lg {
+  .footer {
+    height: fit-content;
+    padding: 20px 0px;
+    .container {
+      flex-direction: column;
+
+      .options {
+        width: 100%;
+        margin-bottom: 50px;
+        h1 {
+          display: none;
+        }
+        .links {
+          .column {
+            align-items: center;
+            justify-content: center;
+
+            h1 {
+              display: block;
+              text-align: center;
+              font-size: 24px;
+            }
+            a {
+              text-align: center;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+      .media {
+        width: 100%;
+        height: fit-content;
+        margin-bottom: 50px;
+        a {
+          h1 {
+            font-size: 44px;
+            margin-bottom: 20px;
+          }
+        }
+
+        .media-icons {
+          width: 300px;
+          margin-bottom: 20px;
+
+          a {
+            i {
+              font-size: 40px;
+            }
+          }
+        }
+        p {
+          font-size: 22px;
+          &:last-child {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-sm {
+  .footer {
+    .container {
+      .options {
+        .links {
+          display: flex;
+          flex-wrap: wrap;
+
+          .column {
+            width: 200px;
+            margin-bottom: 30px;
+          }
+        }
+      }
+      .media {
+        .media-icons {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
