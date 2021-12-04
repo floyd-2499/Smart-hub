@@ -84,7 +84,10 @@ const Footer = () => {
         </div>
         <div className="media">
           <Link to="/">
-            <h1>The Smart Hub</h1>
+            <h1>The Smart Hub
+              <br />
+              <span>Look Smart.. Be Smart..</span>
+            </h1>
           </Link>
           <div className="media-icons">
             <a href="">
@@ -97,11 +100,20 @@ const Footer = () => {
               <i className="fab fa-youtube"></i>
             </a>
           </div>
-          <p>Basthikar Complex</p>
+          <p>
+            Shop No. 11, 1<sup>st</sup> Floor
+          </p>
+          <p>Bastikar Complex</p>
           <p>Near Muttappa Gudi</p>
-          <p>Above Corporation Bank</p>
-          <p>Shaktinagara, Mangalore</p>
-          <p>+91 88613 61726</p>
+          <p>Above Union Bank</p>
+          <p>Shakthi Nagara, Mangalore</p>
+          <br />
+          <p>
+            <i className="fas fa-phone-alt"></i> +91 88613 61726
+          </p>
+          <p>
+            <i className="fab fa-whatsapp"></i> +91 87221 88374
+          </p>
         </div>
       </div>
 

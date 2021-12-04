@@ -19,7 +19,10 @@ const Header = () => {
     <div>
       <div className="header">
         <h1 className="logo">
-          <Link to="/">The Smart Hub</Link>
+          <Link to="/">
+            The Smart Hub
+            <p>Look Smart.. Be Smart..</p>
+          </Link>
         </h1>
 
         <div className="bar" onClick={() => click()}>

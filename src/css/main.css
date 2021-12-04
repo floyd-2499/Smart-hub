@@ -340,10 +340,19 @@
 }
 
 .header .logo a {
+  width: 100%;
   text-decoration: none;
   color: #655552;
   font-size: 44px;
   font-weight: 600;
+}
+
+.header .logo a p {
+  font-size: 20px;
+  width: 70%;
+  text-align: right;
+  margin-top: -12px;
+  opacity: 0.8;
 }
 
 .header .logo a:hover {
@@ -585,11 +594,12 @@
           flex-direction: column;
   width: 25%;
   margin: 0px;
-  margin-bottom: -50px;
+  margin-bottom: -30px;
 }
 
 .footer .container .media a {
   text-decoration: none;
+  margin-bottom: 10px;
 }
 
 .footer .container .media a h1 {
@@ -597,7 +607,14 @@
   text-align: center;
   color: #655552;
   font-weight: 400;
+  line-height: 30px;
   margin-bottom: 10px;
+}
+
+.footer .container .media a h1 span {
+  margin-top: -20px;
+  font-size: 20px;
+  line-height: 0px;
 }
 
 .footer .container .media .media-icons {
@@ -1258,7 +1275,10 @@
     width: 100%;
   }
   .header .logo a {
-    font-size: 28px;
+    font-size: 32px;
+  }
+  .header .logo a p {
+    font-size: 18px;
   }
   .header .bar i {
     font-size: 28px;

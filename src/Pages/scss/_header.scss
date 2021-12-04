@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: space-between;
 
-  .bar{
+  .bar {
     display: none;
     z-index: 3;
   }
@@ -19,10 +19,18 @@
     cursor: pointer;
 
     a {
+      width: 100%;
       text-decoration: none;
       color: $dark-text;
       font-size: 44px;
       font-weight: 600;
+      p {
+        font-size: 20px;
+        width: 70%;
+        text-align: right;
+        margin-top: -12px;
+        opacity: 0.8;
+      }
       &:hover {
         color: $light-text;
       }
@@ -63,7 +71,6 @@
     }
   }
 }
-
 
 .mobile-links {
   z-index: 4;
