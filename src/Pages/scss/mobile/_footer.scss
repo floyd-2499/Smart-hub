@@ -18,14 +18,15 @@
             align-items: center;
             justify-content: center;
 
+
             h1 {
               display: block;
               text-align: center;
-              font-size: 24px;
+              font-size: 26px;
             }
             a {
               text-align: center;
-              font-size: 18px;
+              font-size: 22px;
             }
           }
         }
@@ -71,8 +72,9 @@
           flex-wrap: wrap;
 
           .column {
+            padding: 20px 0px;
             width: 200px;
-            margin-bottom: 30px;
+            margin-bottom: 50px;
           }
         }
       }

@@ -29,3 +29,8 @@ $footer: #F7F1EC;
         @content;
     }
 }
+@mixin media-mid {
+    @media screen and (max-width: 450px) {
+        @content;
+    }
+}

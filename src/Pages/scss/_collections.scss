@@ -4,6 +4,14 @@
   width: 90%;
   margin: 30px auto;
 
+  .opt{
+    width: fit-content;
+    margin: auto;
+    font-size: 24px;
+    color: $dark-text;
+    cursor: pointer;
+    display: none;
+  }
 
   .search {
     width: 75%;
@@ -57,7 +65,8 @@
       cursor: pointer;
     }
   }
-  .filter-btn2{
+  .filter-btn2,
+  .filter-btn3{
     width: 80%;
     margin: 20px auto ;
     display: flex;

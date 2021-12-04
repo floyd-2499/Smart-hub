@@ -8,24 +8,21 @@ const HomePart5 = () => {
   const dispatch = useDispatch();
   let name = " ";
 
-
-
-
   function ShirtKids() {
-    name ="Shirts"
+    name = "Shirts";
     filterK();
-    console.log("hello")
+    console.log("hello");
   }
   function SetsKids() {
-    name ="Clothing Sets"
+    name = "Clothing Sets";
     filterK();
   }
   function DressKids() {
-    name ="Dress"
+    name = "Dress";
     filterK();
   }
   function JeansKids() {
-    name = "Jeans"
+    name = "Jeans";
     filterK();
   }
 
@@ -78,9 +75,11 @@ const HomePart5 = () => {
           </div>
         </Link>
       </div>
-      <div className="btns">
-        <button>Explore More...</button>
-      </div>
+      <Link to="/collections">
+        <div className="btns">
+          <button>Explore More...</button>
+        </div>
+      </Link>
     </div>
   );
 };

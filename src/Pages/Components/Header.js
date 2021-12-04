@@ -8,13 +8,12 @@ const Header = () => {
     console.log("btn click");
     setMobnav("flex");
     setTimeout(() => {
-      setMobnav("none")
+      setMobnav("none");
     }, 4000);
   }
   function closeClick() {
     setMobnav("none");
   }
-
 
   return (
     <div>
@@ -24,7 +23,7 @@ const Header = () => {
         </h1>
 
         <div className="bar" onClick={() => click()}>
-          <i class="fas fa-bars"></i>
+          <i className="fas fa-bars"></i>
         </div>
 
         <div className="links">
@@ -38,7 +37,7 @@ const Header = () => {
       </div>
       <div className="mobile-links" style={{ display: `${mobnav}` }}>
         <div className="btn">
-          <i class="fas fa-times" onClick={() => closeClick()}></i>
+          <i className="fas fa-times" onClick={() => closeClick()}></i>
         </div>
         <Link to="/">Home</Link>
         <Link to="/contact">Contact</Link>

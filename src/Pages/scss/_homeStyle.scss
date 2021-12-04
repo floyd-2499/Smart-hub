@@ -100,7 +100,7 @@
       width: 50%;
       height: 70%;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       flex-direction: column;
       z-index: 2;
 
@@ -108,11 +108,17 @@
         font-size: 36px;
         color: $light-text;
         font-weight: 300;
+        width: 100%;
+        text-align: left;
+        margin: 0%;
       }
       h1 {
         font-size: 60px;
         font-weight: 600;
         color: $dark-text;
+        width: 100%;
+        text-align: left;
+        margin: 0%;
       }
       p {
         margin-top: 20px;
@@ -122,20 +128,25 @@
         width: 80%;
         margin: 20px 0;
       }
-      button {
-        background-color: $dark-text;
-        outline: none;
-        border: none;
-        padding: 8px 25px;
-        border-radius: 10px;
-        color: #fff;
-        font-size: 28px;
-        cursor: pointer;
-        box-shadow: 4px 4px 9px rgba(0, 0, 0, 0.25);
+      a {
+        margin: 0;
+        button {
+          float: left;
+          background-color: $dark-text;
+          outline: none;
+          border: none;
+          padding: 8px 25px;
+          border-radius: 10px;
+          color: #fff;
+          font-size: 28px;
+          cursor: pointer;
+          box-shadow: 4px 4px 9px rgba(0, 0, 0, 0.25);
+          margin: 0%;
 
-        &:hover {
-          box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25),
-            inset 4px 4px 15px rgba(0, 0, 0, 0.25);
+          &:hover {
+            box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25),
+              inset 4px 4px 15px rgba(0, 0, 0, 0.25);
+          }
         }
       }
     }
@@ -212,27 +223,32 @@
       }
     }
   }
-  .btns {
-    width: 99%;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    button {
-      margin: 0;
-      background-color: $dark-text;
-      outline: none;
-      border: none;
-      padding: 8px 30px;
-      border-radius: 10px;
-      color: #fff;
-      font-size: 28px;
-      cursor: pointer;
-      box-shadow: 4px 4px 9px rgba(0, 0, 0, 0.25);
+  a {
+    text-decoration: none;
+    width: 100%;
 
-      &:hover {
-        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25),
-          inset 4px 4px 15px rgba(0, 0, 0, 0.25);
+    .btns {
+      width: 99%;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      button {
+        margin: 0;
+        background-color: $dark-text;
+        outline: none;
+        border: none;
+        padding: 8px 30px;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 28px;
+        cursor: pointer;
+        box-shadow: 4px 4px 9px rgba(0, 0, 0, 0.25);
+
+        &:hover {
+          box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25),
+            inset 4px 4px 15px rgba(0, 0, 0, 0.25);
+        }
       }
     }
   }

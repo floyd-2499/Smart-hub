@@ -15,8 +15,6 @@ const Favorites = () => {
     setFavoriteList(newItem);
   };
 
-  console.log(favoriteList);
-
   function displayList() {
     if (favoriteList === null) {
       return (
@@ -41,7 +39,7 @@ const Favorites = () => {
     } else {
       return favoriteList.map((item) => {
         return (
-          <div className="fav-box">
+          <div className="fav-box" key={item.id}>
             <img src={item.img} alt={item.name} />
             <div className="texts">
               <h1>{item.name}</h1>
@@ -53,7 +51,7 @@ const Favorites = () => {
 
               <div>
                 <button onClick={() => remove(item)}>
-                  <i class="fas fa-trash-alt"></i>
+                  <i className="fas fa-trash-alt"></i>
                 </button>
               </div>
             </div>

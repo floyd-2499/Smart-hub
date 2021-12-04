@@ -1,5 +1,5 @@
 import React from "react";
-import contact from '../images/contact.png';
+import contact from "../images/contact.png";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import "../scss/_contact.scss";
@@ -11,7 +11,7 @@ const Contact = () => {
         <Header />
         <div className="contents">
           <div className="left">
-              <img src={contact} alt="kids" />
+            <img src={contact} alt="kids" />
           </div>
           <div className="right">
             <h1>Contact Us</h1>
@@ -21,8 +21,12 @@ const Contact = () => {
 
             <div className="box">
               <h2>Call Us</h2>
-              <p><i class="fas fa-phone-alt"></i> +91 88613 61726</p>
-              <p><i class="fab fa-whatsapp"></i> +91 87221 88374</p>
+              <p>
+                <i className="fas fa-phone-alt"></i> +91 88613 61726
+              </p>
+              <p>
+                <i className="fab fa-whatsapp"></i> +91 87221 88374
+              </p>
             </div>
             <div className="box">
               <h2>Mail Us</h2>

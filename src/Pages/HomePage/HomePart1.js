@@ -1,8 +1,24 @@
 import React from "react";
 import Header from "../Components/Header";
 import home1 from "../images/home1.svg";
+import { Link } from "react-router-dom";
+import item from "../../Data/CollectionsData";
+import { useDispatch } from "react-redux";
+import { actionTypes } from "./womensFilter/action";
+
 
 const HomePart1 = () => {
+  const dispatch = useDispatch();
+  let name = "Tops";
+
+  const filter = () => {
+    dispatch({
+      type: actionTypes.GET_FILTERED_WOMEN_SUCCESS,
+      payload: item,
+      category: name,
+    });
+  };
+
   return (
     <div className="home1">
       <Header />
@@ -21,12 +37,14 @@ const HomePart1 = () => {
         </div>
         <div className="right">
           <h2>Introducing</h2>
-          <h1>Staple Ethnic Collection</h1>
+          <h1>Staple Tops Collection</h1>
           <p>
-            The best of 2021 office collection is finally here. Choose amongst
-            the best of varieties!
+            The best of 2021 Tops collection is finally here. Choose amongst the
+            best of varieties!
           </p>
-          <button>Explore collections </button>
+          <Link to="/collections">
+            <button onClick={() => filter()}>Explore collections </button>
+          </Link>
         </div>
       </div>
     </div>

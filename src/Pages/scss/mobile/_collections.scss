@@ -1,0 +1,53 @@
+@import "../variables";
+
+
+@include media-xl {
+  .top-nav {
+    .opt {
+      display: block;
+    }
+    .filter-btn2 {
+      display: none;
+    }
+  }
+}
+
+@include media-lg {
+    .top-nav {
+        .search {
+            width: 80%;
+            input{
+                width: 85%;
+            }
+            .icon {
+                width: 15%;
+            }
+        }
+    }
+}
+@include media-md {
+    .top-nav {
+        .search {
+            width: 90%;
+            input{
+                width: 85%;
+            }
+            .icon {
+                width: 15%;
+            }
+        }
+    }
+}
+@include media-mobile {
+    .top-nav {
+        .search {
+            width: 90%;
+            input{
+                width: 80%;
+            }
+            .icon {
+                width: 20%;
+            }
+        }
+    }
+}

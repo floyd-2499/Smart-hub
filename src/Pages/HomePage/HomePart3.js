@@ -75,9 +75,11 @@ const HomePart3 = () => {
           </div>
         </Link>
       </div>
-      <div className="btns">
-        <button>Explore More...</button>
-      </div>
+      <Link to="/collections#top">
+        <div className="btns">
+          <button>Explore More...</button>
+        </div>
+      </Link>
     </div>
   );
 };

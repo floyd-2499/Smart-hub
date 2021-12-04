@@ -8,6 +8,8 @@ import ItemData from "../../Data/CollectionsData";
 const CollectionPage = () => {
   const [catList, setCatList] = useState(ItemData);
   const [searchItem, setSearchItem] = useState("");
+  const [drop, setDrop] = useState(false);
+  const [cate, setCate] = useState("none");
   const list = JSON.parse(localStorage.getItem("item-list"));
   useEffect(() => {
     if (list) {
@@ -43,6 +45,15 @@ const CollectionPage = () => {
     setCatList(filteredSec);
   };
 
+  function dropEffect() {
+    if (drop) {
+      setDrop(false);
+      setCate("none");
+    } else {
+      setDrop(true);
+      setCate("flex");
+    }
+  }
 
   return (
     <div>
@@ -62,6 +73,7 @@ const CollectionPage = () => {
             <i className="fas fa-search"></i>
           </div>
         </div>
+
         <div className="filter-btn">
           {sections.map((section, index) => {
             return (
@@ -71,10 +83,33 @@ const CollectionPage = () => {
             );
           })}
         </div>
+
+        <div className="opt" onClick={() => dropEffect()} id="top">
+          Categories{" "}
+          {!drop ? (
+            <i className="fas fa-caret-down"></i>
+          ) : (
+            <i className="fas fa-caret-up"></i>
+          )}
+        </div>
+
         <div className="filter-btn2">
           {categories.map((category, index) => {
             return (
-              <p key={index}  onClick={() => filter(category)}>
+              <p key={index} onClick={() => filter(category)}>
+                {category}
+              </p>
+            );
+          })}
+        </div>
+        <div
+          className="filter-btn3"
+          style={{ display: `${cate}` }}
+          onClick={() => dropEffect()}
+        >
+          {categories.map((category, index) => {
+            return (
+              <p key={index} onClick={() => filter(category)}>
                 {category}
               </p>
             );
