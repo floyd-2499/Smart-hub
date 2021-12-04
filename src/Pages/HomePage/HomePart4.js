@@ -74,11 +74,6 @@ const HomePart4 = () => {
           </div>
         </Link>
       </div>
-      <Link to="/collections">
-        <div className="btns">
-          <button>Explore More...</button>
-        </div>
-      </Link>
     </div>
   );
 };

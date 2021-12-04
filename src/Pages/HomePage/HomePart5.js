@@ -75,11 +75,6 @@ const HomePart5 = () => {
           </div>
         </Link>
       </div>
-      <Link to="/collections">
-        <div className="btns">
-          <button>Explore More...</button>
-        </div>
-      </Link>
     </div>
   );
 };

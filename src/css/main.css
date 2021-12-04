@@ -1634,7 +1634,9 @@
 
 @media screen and (max-width: 768px) {
   .contact .contents .left {
-    width: 100%;
+    width: 90%;
+    margin: 0%;
+    margin-left: -25px;
   }
   .contact .contents .right h1 {
     font-size: 32px;

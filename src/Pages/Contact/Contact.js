@@ -21,10 +21,10 @@ const Contact = () => {
 
             <div className="box">
               <h2>Call Us</h2>
-              <p>
+              <p style={{fontSize: "22px"}}>
                 <i className="fas fa-phone-alt"></i> +91 88613 61726
               </p>
-              <p>
+              <p style={{fontSize: "22px"}}>
                 <i className="fab fa-whatsapp"></i> +91 87221 88374
               </p>
             </div>
